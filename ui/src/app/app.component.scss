@@ -9,13 +9,22 @@
 .mapboxgl-popup {
     max-width: 400px;
     max-height: 400px;
-    word-wrap: break-word;
+    overflow-wrap: break-word;
     /* font: 12px/20px 'Open Sans', sans-serif; */
+}
+.popup.mapboxgl-popup-content{
+    // max-width: 400px;
+    // max-height: 400px;
+    word-wrap: break-word;
 }
 
 .counter{
     width: 300px;
     height: auto;
+    opacity: .7;
+    background-color: #f3f3f3;
+}
+.counter:hover{
     opacity: 1;
 }
 .example-header-image {

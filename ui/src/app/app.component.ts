@@ -93,7 +93,6 @@ export class AppComponent implements OnInit {
                       if(element){
                         element = element.trim();
                       let url = `http://localhost:3210/getPolygon?country=${element}`;
-                      console.log(url);
                       fetch(url)
                       .then((response) => {
                         return response.json();
@@ -106,7 +105,7 @@ export class AppComponent implements OnInit {
                     }
                   })
                 }
-                    let description = `<span>${e.features[0].properties.ADMIN}</span><ul><li>InBound:${element.isInboundRestricted}</li><li>Inbound land:${element.isInboundLandRestricted}</li><li>Inbound Complete:${element.isInboundCompletelyRestricted}</li><li>Countries restriction:${element.inboundRestrictedCountryNamesRaw}</li>`;
+                    let description = `<style>"width:100px"</style><span>${e.features[0].properties.ADMIN}</span><ul><li>InBound:${element.isInboundRestricted}</li><li>Inbound land:${element.isInboundLandRestricted}</li><li>Inbound Complete:${element.isInboundCompletelyRestricted}</li><li>Countries restriction:${element.inboundRestrictedCountryNamesRaw}</li>`;
                     popup
                         .setLngLat(e.lngLat)
                         .setHTML(description)
@@ -123,7 +122,6 @@ export class AppComponent implements OnInit {
         // Change it back to a pointer when it leaves.
         map.on('mouseleave', element.properties.ISO_A3, function() {
           if(tempArray.length){
-            console.log(tempArray.length);
           tempArray.forEach(element => {
             map.setPaintProperty(element, 'fill-opacity', 0);
           })
