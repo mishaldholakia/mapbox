@@ -1,4 +1,4 @@
-# mapbox
+# Mapbox
 COVID travel restriction Map data
 
 ## Get started
