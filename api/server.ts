@@ -9,8 +9,24 @@ import express = require('express');
 import http = require('http');
 import bodyParser = require('body-parser');
 import url = require('url');
+
 import cors = require('cors');
 const fs = require('fs');
+const worldAggregated  = 'https://raw.githubusercontent.com/datasets/covid-19/master/data/worldwide-aggregated.csv';
+
+const csv2json = require('csv2json');
+const request = require('request');
+const path = require('path');
+
+
+ 
+request(worldAggregated)
+  .pipe(csv2json({
+    // Defaults to comma.
+    separator: ','
+  }))
+  .pipe(fs.createWriteStream('./assets/world-covid-aggregated/data.json'));
+
 
 const geoJson = require('./assets/countries.json');
 let tmp = geoJson.features;
@@ -39,3 +55,8 @@ app.get('/getPolygon', (req, res) => {
       }
     })
 });
+
+app.get('/worldwide-aggregated', (req, res) => {
+  res.sendFile(path.join(__dirname, './assets/world-covid-aggregated/data.json'));
+  // res.json(`{./assets/world-covid-aggregated/data.json}`);
+})
