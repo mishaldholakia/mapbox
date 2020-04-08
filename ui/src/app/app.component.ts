@@ -4,8 +4,8 @@ import { HttpClient } from '@angular/common/http';
 declare function require(arg:string): any;
 const environment = require('../assets/auth/token.json');
 const polygonCountries = require('../assets/polygon/countries.json')
-const link = 'https://s3.amazonaws.com/rawstore.datahub.io/23f420f929e0e09c39d916b8aaa166fb.geojson'
 const restrictedData =require('../assets/restricted-travel-map/data.json')
+
 declare var mapboxgl: any;
 
 @Component({
@@ -14,10 +14,27 @@ declare var mapboxgl: any;
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
+  confirmed = 0;
+  recovered = 0;
+  deaths = 0;
   title = 'mapbox';
-
+  radius: number = 10;
+  color: string;
   constructor(private http: HttpClient){}
   ngOnInit() {
+    // Load data for counter
+    let counterUrl = 'http://localhost:3210/worldwide-aggregated'
+
+    fetch(counterUrl)
+    .then((response) => {
+      return response.json();
+    }).then((data) => {
+      let length = data.length - 1;
+      this.confirmed = data[length].Confirmed;
+      this.recovered = data[length].Recovered;
+      this.deaths = data[length].Deaths;
+    })
+
     let tempArray = []
     mapboxgl.accessToken =environment.access_token;
     var map = new mapboxgl.Map({
@@ -61,14 +78,6 @@ export class AppComponent implements OnInit {
           closeButton: false,
           closeOnClick: false
       });
-
-        // When a click event occurs on a feature in the states layer, open a popup at the
-        // location of the click, with description HTML from its properties.
-
-        // setTimeout(() => {
-        //   map.setPaintProperty(polygonCountries.features[104].properties.ISO_A3, 'fill-opacity', 0.5);
-        // }, 4000);
-        
         map.on('click', element.properties.ISO_A3, function(e) {
             restrictedData.forEach(element => {
                 if (e.features[0].properties.ISO_A3 === element.ISO_A3) {
