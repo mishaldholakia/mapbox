@@ -1,0 +1,282 @@
+[
+  {
+    "PlaceName": "Charlotte Douglas International Airport, Charlotte, NC, USA",
+    "Latitude": 35.21389,
+    "Longitude": -80.943054
+  },
+  {
+    "PlaceName": "O’Hare International Airport, Chicago, IL, USA",
+    "Latitude": 41.978611,
+    "Longitude": -87.904724
+  },
+  {
+    "PlaceName": "Tucson International Airport, Tuscon, Arizona, US",
+    "Latitude": 32.116112,
+    "Longitude": -110.941109
+  },
+  {
+    "PlaceName": "Candy Kitchen Ranch Airport, Ramah, NM, USA",
+    "Latitude": 34.903271,
+    "Longitude": -108.514519
+  },
+  {
+    "PlaceName": "Canandaigua Airport - KIUA, Canandaigua, NY, USA",
+    "Latitude": 42.907768,
+    "Longitude": -77.31897
+  },
+  {
+    "PlaceName": "Asheville Regional Airport, Fletcher, NC, USA",
+    "Latitude": 35.436077,
+    "Longitude": -82.541298
+  },
+  {
+    "PlaceName": "Dallas Love Field Airport, Dallas, TX, USA",
+    "Latitude": 32.848152,
+    "Longitude": -96.851349
+  },
+  {
+    "PlaceName": "Fly Bart's, East Moriches, NY, the USA",
+    "Latitude": 40.822773,
+    "Longitude": -72.748634
+  },
+  {
+    "PlaceName": "Tampa International Airport, Tampa, FL, USA",
+    "Latitude": 27.979168,
+    "Longitude": -82.539337
+  },
+  {
+    "PlaceName": "Kotlik Airport (KOT), Kotlik, AK, USA",
+    "Latitude": 63.035789,
+    "Longitude": -163.527863
+  },
+  {
+    "PlaceName": "Michael Army Airfield (DPG), Utah, USA",
+    "Latitude": 40.199387,
+    "Longitude": -112.937469
+  },
+  {
+    "PlaceName": "Emerald Coast Aviation, Crestview, FL, USA",
+    "Latitude": 30.781055,
+    "Longitude": -86.524994
+  },
+  {
+    "PlaceName": "Preston Smith International Airport, Lubbock, TX, USA",
+    "Latitude": 33.656384,
+    "Longitude": -101.821861
+  },
+  {
+    "PlaceName": "Eagle Landing Airport LZ, Avinger, TX, USA",
+    "Latitude": 32.886677,
+    "Longitude": -94.599251
+  },
+  {
+    "PlaceName": "Greater Rochester International Airport, Rochester, NY, USA",
+    "Latitude": 43.128002,
+    "Longitude": -77.665474
+  },
+  {
+    "PlaceName": "Warrenton-Fauquier Airport (KHWY), Midland, VA, USA",
+    "Latitude": 38.592724,
+    "Longitude": -77.711441
+  },
+  {
+    "PlaceName": "San Diego International Airport (SAN), San Diego, CA, USA",
+    "Latitude": 32.73177,
+    "Longitude": -117.197624
+  },
+  {
+    "PlaceName": "Mc Donald Field, Marshville, NC, USA",
+    "Latitude": 35.053238,
+    "Longitude": -80.409195
+  },
+  {
+    "PlaceName": "Nashville International Airport (BNA), Nashville, TN, USA",
+    "Latitude": 36.131687,
+    "Longitude": -86.668823
+  },
+  {
+    "PlaceName": "Lackland AFB, San Antonio, TX, USA",
+    "Latitude": 29.384344,
+    "Longitude": -98.618645
+  },
+  {
+    "PlaceName": "Seattle-Tacoma International Airport, Seattle, WA, USA",
+    "Latitude": 47.443546,
+    "Longitude": -122.301659
+  },
+  {
+    "PlaceName": "McGhee Tyson Airport (TYS), Alcoa, TN, USA",
+    "Latitude": 35.805813,
+    "Longitude": -83.989815
+  },
+  {
+    "PlaceName": "Kenai Municipal Airport, Kenai, AK, USA",
+    "Latitude": 60.567402,
+    "Longitude": -151.246719
+  },
+  {
+    "PlaceName": "Fort Gordon, Augusta, GA, USA",
+    "Latitude": 33.420696,
+    "Longitude": -82.152374
+  },
+  {
+    "PlaceName": "Mineta San José International Airport (SJC), San Jose, CA, USA",
+    "Latitude": 37.363949,
+    "Longitude": -121.92894
+  },
+  {
+    "PlaceName": "Hartsfield-Jackson Atlanta International Airport, Atlanta, GA, USA",
+    "Latitude": 33.640411,
+    "Longitude": -84.419853
+  },
+  {
+    "PlaceName": "Santa Fe Municipal Airport (SAF), Santa Fe, NM, USA",
+    "Latitude": 35.6175,
+    "Longitude": -106.088333
+  },
+  {
+    "PlaceName": "Delta County Airport (ESC), Escanaba, MI, USA",
+    "Latitude": 45.719906,
+    "Longitude": -87.09407
+  },
+  {
+    "PlaceName": "Cincinnati/Northern Kentucky International Airport (CVG), Hebron, KY, USA",
+    "Latitude": 39.053276,
+    "Longitude": -84.663017
+  },
+  {
+    "PlaceName": "San Diego International Airport (SAN), San Diego, CA, USA",
+    "Latitude": 32.732346,
+    "Longitude": -117.196053
+  },
+  {
+    "PlaceName": "Falcon Field Airport, Mesa, AZ, USA",
+    "Latitude": 33.457439,
+    "Longitude": -111.727386
+  },
+  {
+    "PlaceName": "John Wayne Airport (SNA), CA, USA",
+    "Latitude": 33.678925,
+    "Longitude": -117.862869
+  },
+  {
+    "PlaceName": "San Francisco International Airport (SFO), San Francisco, CA, USA",
+    "Latitude": 37.615223,
+    "Longitude": -122.389977
+  },
+  {
+    "PlaceName": "Hunter Army Airfield, Savannah, GA, USA",
+    "Latitude": 32.015644,
+    "Longitude": -81.143127
+  },
+  {
+    "PlaceName": "Los Angeles International Airport, Los Angeles, CA, USA",
+    "Latitude": 33.942791,
+    "Longitude": -118.410042
+  },
+  {
+    "PlaceName": "North Las Vegas Airport (VGT), Las Vegas, USA",
+    "Latitude": 36.213257,
+    "Longitude": -115.194572
+  },
+  {
+    "PlaceName": "Northern Lights Airport, Alburgh, VT, USA",
+    "Latitude": 44.871201,
+    "Longitude": -73.286491
+  },
+  {
+    "PlaceName": "McCarran International Airport (LAS), Las Vegas, NV, USA",
+    "Latitude": 36.08601,
+    "Longitude": -115.153969
+  },
+  {
+    "PlaceName": "Denver International Airport, Denver, CO, USA",
+    "Latitude": 39.849312,
+    "Longitude": -104.673828
+  },
+  {
+    "PlaceName": "Pocatello Regional Airport, Pocatello, ID, USA",
+    "Latitude": 42.915703,
+    "Longitude": -112.59304
+  },
+  {
+    "PlaceName": "Borrego Valley Airport (BXS), Borrego Springs, CA, USA",
+    "Latitude": 33.257923,
+    "Longitude": -116.321014
+  },
+  {
+    "PlaceName": "Hatbox Field Airport, Muskogee, OK, USA",
+    "Latitude": 35.748463,
+    "Longitude": -95.412529
+  },
+  {
+    "PlaceName": "Unalakleet Airport (UNK), Unalakleet, AK, USA",
+    "Latitude": 63.889515,
+    "Longitude": -160.799927
+  },
+  {
+    "PlaceName": "Boone County Regional Airport (HRO), Harrison, AR, USA",
+    "Latitude": 36.264206,
+    "Longitude": -93.154961
+  },
+  {
+    "PlaceName": "St George Municipal Airport (SGU), St. George, UT, USA",
+    "Latitude": 37.030792,
+    "Longitude": -113.508987
+  },
+  {
+    "PlaceName": "General Mitchell International Airport (MKE), Milwaukee, WI, USA",
+    "Latitude": 42.94989,
+    "Longitude": -87.900414
+  },
+  {
+    "PlaceName": "Logan International Airport (BOS), Boston, MA, USA",
+    "Latitude": 42.366978,
+    "Longitude": -71.022362
+  },
+  {
+    "PlaceName": "Naec Airport, Jackson, NJ, USA",
+    "Latitude": 40.032608,
+    "Longitude": -74.338257
+  },
+  {
+    "PlaceName": "Memphis International Airport (MEM), TN, USA",
+    "Latitude": 35.040031,
+    "Longitude": -89.981873
+  },
+  {
+    "PlaceName": "Cape Girardeau Regional Airport (CGI), MO, USA",
+    "Latitude": 37.225136,
+    "Longitude": -89.569305
+  },
+  {
+    "PlaceName": "Laredo, TX, USA",
+    "Latitude": 27.506748,
+    "Longitude": -99.502914
+  },
+  {
+    "PlaceName": "Dallas/Fort Worth International Airport, Texas, USA",
+    "Latitude": 32.89748,
+    "Longitude": -97.040443
+  },
+  {
+    "PlaceName": "Quarry Hill Park, Rochester, MN, USA",
+    "Latitude": 44.030346,
+    "Longitude": -92.437889
+  },
+  {
+    "PlaceName": "Little Rock Air Force Base, Jacksonville, USA",
+    "Latitude": 34.914547,
+    "Longitude": -92.142914
+  },
+  {
+    "PlaceName": "Spruce Creek Airport, Florida, USA",
+    "Latitude": 29.080168,
+    "Longitude": -81.046669
+  },
+  {
+    "PlaceName": "Gwinnett County Airport (LZU), GA, USA",
+    "Latitude": 33.977947,
+    "Longitude": -83.956772
+  }
+]

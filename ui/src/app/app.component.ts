@@ -1,11 +1,12 @@
-import { Component, OnInit,NgZone } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+
 
 declare function require(arg:string): any;
 const environment = require('../assets/auth/token.json');
 const polygonCountries = require('../assets/polygon/countries.json')
 const restrictedData =require('../assets/restricted-travel-map/data.json')
-
+const airport = require('../assets/airport/airport.json')
 declare var mapboxgl: any;
 
 @Component({
@@ -17,10 +18,18 @@ export class AppComponent implements OnInit {
   confirmed = 0;
   recovered = 0;
   deaths = 0;
+  country: string;
+  inbound: string;
+  inboundLand: string;
+  inboundComplete: string;
+  countries: string;
   title = 'mapbox';
   radius: number = 10;
   color: string;
+  reason = '';
+
   constructor(private http: HttpClient){}
+
   ngOnInit() {
     // Load data for counter
     let counterUrl = 'http://localhost:3210/worldwide-aggregated'
@@ -74,10 +83,6 @@ export class AppComponent implements OnInit {
                 'fill-opacity': 0
             }
         })
-          var popup = new mapboxgl.Popup({
-          closeButton: false,
-          closeOnClick: false
-      });
         map.on('click', element.properties.ISO_A3, function(e) {
             restrictedData.forEach(element => {
                 if (e.features[0].properties.ISO_A3 === element.ISO_A3) {
@@ -105,11 +110,14 @@ export class AppComponent implements OnInit {
                     }
                   })
                 }
-                    let description = `<style>"width:100px"</style><span>${e.features[0].properties.ADMIN}</span><ul><li>InBound:${element.isInboundRestricted}</li><li>Inbound land:${element.isInboundLandRestricted}</li><li>Inbound Complete:${element.isInboundCompletelyRestricted}</li><li>Countries restriction:${element.inboundRestrictedCountryNamesRaw}</li>`;
-                    popup
-                        .setLngLat(e.lngLat)
-                        .setHTML(description)
-                        .addTo(map);
+                document.getElementById("country").innerHTML = e.features[0].properties.ADMIN;
+                document.getElementById("inbound").innerHTML = `Inbound: ` + element.isInboundRestricted;
+                document.getElementById("inboundLand").innerHTML = 'Inbound Land: ' + element.isInboundLandRestricted;
+                document.getElementById("inboundComplete").innerHTML = 'Inbound Complete: ' + element.isInboundCompletelyRestricted;
+                document.getElementById("countries").innerHTML = 'Restricted countries: ' + element.inboundRestrictedCountryNamesRaw;
+                document.getElementById("navbar").classList.remove("hidden");
+                document.getElementById("navbar").classList.add("visible");
+
                 }
             });
         });
@@ -127,14 +135,12 @@ export class AppComponent implements OnInit {
           })
             tempArray.length = 0;
         }
-            popup.remove();
+        // document.getElementById("navbar").style.opacity = "0.7";
+        document.getElementById("navbar").classList.remove("visible");
+        document.getElementById("navbar").classList.add("hidden");
             map.getCanvas().style.cursor = '';
         });
-      });
+      })
     })
-    // insert from 2nd comment
     }
   }
-      // setTimeout(() => {
-      //   map.setLayoutProperty(polygonCountries.features[104].properties.ISO_A3, 'visibility', 'none');
-      // }, 14000);

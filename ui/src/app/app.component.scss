@@ -31,3 +31,29 @@
     background-image: url('../assets/images/covid.jpg');
     background-size: cover;
   }
+  #navbar {
+    position: absolute;
+    top: 25%;
+    right: 10px;
+    width: 275px;
+    height: 40%;
+    background-color: #f3f3f3;
+    // opacity: .7;
+    word-wrap: break-word;  
+  }
+  #countries{
+    overflow-wrap: break-word;
+    display: inline-block;
+    word-break: break-all;
+}
+
+.visible {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 3s linear;
+  }
+  .hidden {
+    visibility: hidden;
+    opacity: 0.5;
+    transition: visibility 0s 3s, opacity 2s linear;
+  }
