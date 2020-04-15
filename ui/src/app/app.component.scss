@@ -38,7 +38,7 @@
     width: 275px;
     height: auto;
     background-color: #f3f3f3;
-    // opacity: .7;
+    opacity: 1;
     word-wrap: break-word;  
   }
   #countries{
@@ -46,14 +46,18 @@
     display: inline-block;
     word-break: break-all;
 }
-
-.visible {
-    visibility: visible;
-    opacity: 1;
-    transition: opacity 1s linear;
-  }
-  .hidden {
-    visibility: hidden;
-    opacity: 0.5;
-    transition: visibility 0s 3s, opacity 2s 1s linear;
-  }
+.box{
+  margin-left: 2em;
+  margin-right: 2em;
+  border: 1px solid   #f3f3f3;
+  position: absolute;
+  bottom: 10px;
+  width: 96%;
+  height: 175px;
+  background-color: #f3f3f3;
+  opacity: .5;
+}
+.box:hover{
+  opacity: 1;
+  cursor: pointer;
+}

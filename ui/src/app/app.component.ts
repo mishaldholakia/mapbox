@@ -8,6 +8,7 @@ const polygonCountries = require('../assets/polygon/countries.json')
 const restrictedData =require('../assets/restricted-travel-map/data.json')
 const airport = require('../assets/airport/airport.json')
 declare var mapboxgl: any;
+declare var ApexCharts: any;
 
 @Component({
   selector: 'app-root',
@@ -27,13 +28,18 @@ export class AppComponent implements OnInit {
   radius: number = 10;
   color: string;
   reason = '';
+  aggregatedDate= [];
+  aggregatedConfirmed= [];
+  aggregatedRecovered= [];
+  aggregatedDeaths= [];
+  aggregatedData;
 
   constructor(private http: HttpClient){}
 
   ngOnInit() {
     // Load data for counter
-    let counterUrl = 'http://localhost:3210/worldwide-aggregated'
-
+    let counterUrl = 'http://localhost:3210/worldwide-aggregated';
+    document.getElementById("navbar").style.visibility = "hidden";
     fetch(counterUrl)
     .then((response) => {
       return response.json();
@@ -42,7 +48,70 @@ export class AppComponent implements OnInit {
       this.confirmed = data[length].Confirmed;
       this.recovered = data[length].Recovered;
       this.deaths = data[length].Deaths;
-    })
+      if(length>10){
+        this.aggregatedData = data.splice(-10,10);
+        console.log(this.aggregatedData);
+        this.aggregatedData.forEach(element => {
+          this.aggregatedDate.push(element.Date);
+          this.aggregatedConfirmed.push(element.Confirmed);
+          this.aggregatedRecovered.push(element.Recovered);
+          this.aggregatedDeaths.push(element.Deaths)
+        });
+
+        var options = {
+          series: [{
+          name: 'Confirmed',
+          data: this.aggregatedConfirmed
+        }, {
+          name: 'Recovered',
+          data: this.aggregatedRecovered
+        }, {
+          name: 'Deaths',
+          data: this.aggregatedDeaths
+        }],
+          chart: {
+          type: 'bar',
+          height: 150
+        },
+        plotOptions: {
+          bar: {
+            horizontal: false,
+            columnWidth: '55%',
+            endingShape: 'rounded'
+          },
+        },
+        dataLabels: {
+          enabled: false
+        },
+        stroke: {
+          show: true,
+          width: 2,
+          colors: ['transparent']
+        },
+        xaxis: {
+          categories: this.aggregatedDate,
+        },
+        yaxis: {
+          title: {
+            text: 'Total'
+          }
+        },
+        fill: {
+          opacity: 1
+        },
+        tooltip: {
+          y: {
+            formatter: function (val) {
+              return val
+            }
+          }
+        }
+        };
+    
+        var chart = new ApexCharts(document.querySelector("#chart"), options);
+        chart.render();
+      }
+    });
 
     let tempArray = []
     mapboxgl.accessToken =environment.access_token;
@@ -115,9 +184,9 @@ export class AppComponent implements OnInit {
                 document.getElementById("inboundLand").innerHTML = 'Inbound Land: ' + element.isInboundLandRestricted;
                 document.getElementById("inboundComplete").innerHTML = 'Inbound Complete: ' + element.isInboundCompletelyRestricted;
                 document.getElementById("countries").innerHTML = 'Restricted countries: ' + element.inboundRestrictedCountryNamesRaw;
-                document.getElementById("navbar").classList.remove("hidden");
-                document.getElementById("navbar").classList.add("visible");
-
+                // document.getElementById("navbar").classList.remove("hidden");
+                // document.getElementById("navbar").classList.add("visible");
+                document.getElementById("navbar").style.visibility = "visible";
                 }
             });
         });
@@ -136,8 +205,9 @@ export class AppComponent implements OnInit {
             tempArray.length = 0;
         }
         // document.getElementById("navbar").style.opacity = "0.7";
-        document.getElementById("navbar").classList.remove("visible");
-        document.getElementById("navbar").classList.add("hidden");
+        // document.getElementById("navbar").classList.remove("visible");
+        // document.getElementById("navbar").classList.add("hidden");
+        document.getElementById("navbar").style.visibility = "hidden";
             map.getCanvas().style.cursor = '';
         });
       })
