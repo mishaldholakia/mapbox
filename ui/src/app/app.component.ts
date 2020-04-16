@@ -48,8 +48,8 @@ export class AppComponent implements OnInit {
       this.confirmed = data[length].Confirmed;
       this.recovered = data[length].Recovered;
       this.deaths = data[length].Deaths;
-      if(length>10){
-        this.aggregatedData = data.splice(-10,10);
+      if(length>20){
+        this.aggregatedData = data.splice(-20,20);
         console.log(this.aggregatedData);
         this.aggregatedData.forEach(element => {
           this.aggregatedDate.push(element.Date);

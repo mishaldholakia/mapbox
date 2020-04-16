@@ -81,5 +81,6 @@
 {"Date":"2020-04-10","Confirmed":"1691719","Recovered":"376096","Deaths":"102525","Increase rate":"6.04061804619676"},
 {"Date":"2020-04-11","Confirmed":"1771514","Recovered":"402110","Deaths":"108503","Increase rate":"4.716799894072243"},
 {"Date":"2020-04-12","Confirmed":"1846679","Recovered":"421722","Deaths":"114091","Increase rate":"4.242980862697105"},
-{"Date":"2020-04-13","Confirmed":"1917319","Recovered":"448655","Deaths":"119482","Increase rate":"3.8252452104561754"}
+{"Date":"2020-04-13","Confirmed":"1917319","Recovered":"448655","Deaths":"119482","Increase rate":"3.8252452104561754"},
+{"Date":"2020-04-14","Confirmed":"1976191","Recovered":"474261","Deaths":"125984","Increase rate":"3.070537557912898"}
 ]
