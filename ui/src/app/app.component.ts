@@ -6,7 +6,6 @@ declare function require(arg:string): any;
 const environment = require('../assets/auth/token.json');
 const polygonCountries = require('../assets/polygon/countries.json')
 const restrictedData =require('../assets/restricted-travel-map/data.json')
-const airport = require('../assets/airport/airport.json')
 declare var mapboxgl: any;
 declare var ApexCharts: any;
 
@@ -38,7 +37,7 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     // Load data for counter
-    let counterUrl = 'http://localhost:3210/worldwide-aggregated';
+    let counterUrl = `${environment.url}worldwide-aggregated`;
     document.getElementById("navbar").style.visibility = "hidden";
     fetch(counterUrl)
     .then((response) => {
@@ -48,7 +47,7 @@ export class AppComponent implements OnInit {
       this.confirmed = data[length].Confirmed;
       this.recovered = data[length].Recovered;
       this.deaths = data[length].Deaths;
-      if(length>20){
+      if(length>25){
         this.aggregatedData = data.splice(-20,20);
         console.log(this.aggregatedData);
         this.aggregatedData.forEach(element => {
@@ -166,7 +165,7 @@ export class AppComponent implements OnInit {
                     tmpCountriesArray.forEach(element => {
                       if(element){
                         element = element.trim();
-                      let url = `http://localhost:3210/getPolygon?country=${element}`;
+                      let url = `${environment.url}getPolygon?country=${element}`;
                       fetch(url)
                       .then((response) => {
                         return response.json();
