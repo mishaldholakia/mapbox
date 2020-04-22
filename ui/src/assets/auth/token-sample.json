@@ -1,4 +1,5 @@
 {
-  "access_token": "Enter your Mapbox token"
+  "access_token": "Enter your Mapbox token",
+  "url": "http://LOCALHOST IP Address :3210/"
 }
 
